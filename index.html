@@ -1,28 +1,39 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>My Page</title>
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hello World!</h1>
-				    <p>Hello</p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="https://github.com/thebernardlim">github.com/thebernardlim</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+---
+layout: default
+---
+
+<div class="row">
+
+  <div class="eight columns">
+    <h1 class="page-heading">Posts</h1>
+
+    <ul class="post-list">
+      {% for post in site.posts limit: 3 %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+  		
+  		{{ post.excerpt }}
+        </li>
+      {% endfor %}
+    </ul>
+</div>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
+
+<div class = "four columns">
+  <h4>Recent Writings </h4>
+  <p>From the archives of this journal:</p>
+  <ul class="disc">
+    {% for post in site.posts offset:3 limit: 10 %}
+      <li><a href="{{post.url}}">{{post.title}}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+
