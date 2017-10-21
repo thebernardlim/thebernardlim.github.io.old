@@ -18,6 +18,5 @@ highlighter:      none
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 gems: [jekyll-paginate]
