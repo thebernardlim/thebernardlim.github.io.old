@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Adding Custom Handler in Sitecore"
+title:  "Sitecore - Adding Custom Handler to a Sitecore Solution"
 date:   2017-10-21 15:53:00
 categories: sitecore
 excerpt : Steps on how to add a custom handler in a Sitecore solution
