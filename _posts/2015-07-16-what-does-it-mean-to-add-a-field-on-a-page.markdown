@@ -2,7 +2,7 @@
 layout:	post
 title: 	"What does it ACTUALLY mean to just add JUST ONE field to an existing page"
 date:	2015-07-16 00:19:00
-categories:	software-development
+category: Software development
 excerpt: A harmless request of `adding a simple field to an existing page` cannot be that complex right? This post explores dives in and explores what actually goes through a client's and dev's mind in such a scenario.
 ---
 

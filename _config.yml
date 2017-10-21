@@ -1,19 +1,23 @@
 # Site settings
-title: Bernard Lim 
+title: thebernardlim
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Software development. Fitness. Arsenal Football Club.
-baseurl: "" # the subpath of your site, e.g. /blog/
+  Software development. Fitness. Arsenal FC.
+baseurl: / # the subpath of your site, e.g. /blog/
 url: "http://localhost:4000" # the base hostname & protocol for your site
 github_username: github.com/thebernardlim
 testtest: sdsdsds
-paginate: 2
+paginate: 8
 collections:
 - crossfit
 
 
-# Build settings
-markdown: kramdown
-highlighter: false
+# Dependencies
+markdown:         kramdown
+highlighter:      none
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
 
 gems: [jekyll-paginate]
