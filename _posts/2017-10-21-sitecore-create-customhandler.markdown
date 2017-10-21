@@ -4,6 +4,7 @@ title:  "Adding Custom Handler in Sitecore"
 date:   2017-10-21 15:53:00
 categories: sitecore
 excerpt : Steps on how to add a custom handler in a Sitecore solution
+excerpt_seperator: 
 ---
 
 Adding custom handlers is a common practice in ASP.Net applications.
