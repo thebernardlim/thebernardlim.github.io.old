@@ -4,6 +4,7 @@ title: 	"12 ways to run faster"
 date:	2015-07-18 00:19:00
 categories:	fitness
 excerpt: I used to be an avid runner. Here are a couple of experience pointers I learnt through my running journey that you can use to help improve your running performance
+published: false
 ---
 
 Mentally depict running, and one who had never do running as a sport in itself would think running is an easy sport. Just tie up your shoelaces and accelerate till finish line. Right? Not exactly. 
