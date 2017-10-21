@@ -1,12 +1,13 @@
 # Site settings
-title: Bernard Lim 123
+title: Bernard Lim 
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Software development. Fitness. Arsenal Football Club.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://localhost:4000" # the base hostname & protocol for your site
 github_username: github.com/thebernardlim
-paginate: 1
+testtest: sdsdsds
+paginate: 2
 collections:
 - crossfit
 
