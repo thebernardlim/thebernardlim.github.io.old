@@ -1,39 +1,37 @@
 ---
 layout: default
+title: Home
 ---
 
-<div class="row">
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-  <div class="eight columns">
-    <h1 class="page-heading">Posts</h1>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    <ul class="post-list">
-      {% for post in site.posts limit: 3 %}
-        <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-  		<i>{{post.categories}}</i><br/>
-  		{{ post.excerpt }}
-        </li>
-      {% endfor %}
-    </ul>
-</div>
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+    {{ post.excerpt }}
+  </div>
+  {% endfor %}
 </div>
 
-<div class = "four columns">
-  <h4>Recent Writings </h4>
-  <p>From the archives of this journal:</p>
-  <ul class="disc">
-    {% for post in site.posts offset:3 limit: 10 %}
-      <li><a href="{{post.url}}">{{post.title}}</a></li>
-    {% endfor %}
-  </ul>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
 </div>
-
-
-
